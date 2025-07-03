@@ -1,0 +1,10 @@
+__pycache__/
+*.pd[cod]
+.sqlite3
+.log
+media/
+.env
+.vscode/
+venv/
+env/
+.venv/
