@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block titulo %}
+<title>Listar usuarios</title>
+{% endblock %}
+{% block navegacion %}
+{% include 'navegacion.html' %}
+{% endblock %}
 {% block contenido %}
 <section data-bs-version="5.1" class="team2 cid-tffTM7TT6b">
     <h2 style="text-align:center; margin-top: 8%;"><strong>Usuarios:</strong></h2>
@@ -30,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
 </section>
 {% endblock %}

@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     # Instalar nuestras propias aplicaciones
     "apps.libros",
     "apps.usuarios",
+    "apps.opiniones"
 ]
 
 MIDDLEWARE = [
