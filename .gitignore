@@ -2,7 +2,20 @@ __pycache__/
 *.pd[cod]
 .sqlite3
 .log
-media/
+# -----
+# Ignoramos toda la carpeta media
+/media/*
+# Salvamos la carpeta libros
+!/media/libros/ 
+# Ignoramos nuevamente todo lo que hay dentro
+/media/libros/*
+# Y salvamos el archivo default
+!/media/libros/libro_default.jpg
+# Mismo patrón para usuarios default
+!/media/usuarios/
+/media/usuarios/*
+!/media/usuarios/usuario_default.png
+# -----
 .env
 .vscode/
 venv/
