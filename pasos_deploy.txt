@@ -1,0 +1,27 @@
+OPCIONAL: Creamos un dump.sql con los datos de sus bd con el comando : mysqldump -u <usuario> -p <nombre de la bd> > dump.sql
+Crear una cuenta gratuita en https://www.pythonanywhere.com 
+Iniciar una nueva consola bash
+Chequear que esté todo actualizado en el repo ( incluyendo el requirements.txt, recuerden que el comando para actualizarlo es pip freeze > requirements.txt)
+Copio el link para clonarlo (desde el github en Code -> clone https)
+En la bash del servidor(pythonanywhere) voy a ejecutar git clone <aca pego el link https del repo>
+Luego creo un entorno virtual con el comando mkvirtualenv <nombre del entorno>
+Ya aparece activado, me muevo hasta la carpeta que contiene el requirements y ejecuto el pip install -r requirements.txt 
+Vamos a añadir una nueva app
+Manual configuration -> La ultima version
+Configuramos el venv simplemente ponemos el nombre que le dimos al entorno
+Luego configuramos el wsgi con los paths correspondientes
+configuramos los static y media con sus paths
+Voy a database y creo una nueva
+Configuro el settings con el allowed host y las config de la base de datos
+En la consola ejecuto un migrate
+Ejecuto python manage.py collectstatic y se crea una nueva carpeta con archivos estaticos del admin y los del sitio
+Cambio la config de static, el path ahora dirige a esta carpeta staticfiles
+Hago reload de la app y ya está todo
+OPCIONAL si hicieron el dump: En el bash escribo el comando: mysql -u <usuario> -h <host> -p 
+- Les va a pedir la contraseña de la bd
+- luego : USE <nombre de la bd>;
+- y una vez que están en la bd correcta ejecutan : source dump.sql 
+- y cargará todos los datos que tenian en local
+- Los media no se cargaran porque están ignorados en el gitignore, 
+- pero pueden borrar estas lineas y subir lo que tienen , esto lo haciamos asi porque al trabajar en grupo podia generar conflictos
+- salgo con: quit
